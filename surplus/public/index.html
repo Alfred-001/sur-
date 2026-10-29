@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SURPLUS – Good food lives on</title>
+  <meta name="description" content="SURPLUS connects restaurants with customers and donation organizations to reduce avoidable food waste. Prototype with demo data.">
+  <link rel="icon" type="image/png" href="assets/logo.png">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#app">Skip to content</a>
+
+  <div class="demo-banner" role="note">
+    <strong>Demo prototype.</strong> Demo accounts, fictional data, no real payments. Everything is saved in this browser only.
+  </div>
+
+  <header class="nav">
+    <a class="brand" href="#/" id="brand-link" aria-label="SURPLUS home">
+      <img src="assets/logo.png" alt="SURPLUS – Good food lives on" width="886" height="428">
+    </a>
+    <nav id="main-nav" aria-label="Main"></nav>
+    <div class="account">
+      <label for="account-switch" class="account-label">Demo account</label>
+      <select id="account-switch" aria-describedby="account-hint"></select>
+      <span id="account-hint" class="sr-only">Switching accounts is a demo feature and not real security.</span>
+    </div>
+  </header>
+
+  <main id="app" tabindex="-1" aria-live="polite"></main>
+
+  <footer class="footer">
+    <p>SURPLUS · Student innovation prototype · Food listings are provided by participating restaurants. Appropriate food handling and storage remain essential.</p>
+    <button type="button" class="link-btn" id="reset-demo">Reset demo data</button>
+  </footer>
+
+  <div id="modal-root"></div>
+  <div id="toast-root" role="status" aria-live="polite"></div>
+
+  <script src="js/store.js" defer></script>
+  <script src="js/app.js" defer></script>
+  <script src="js/marketplace.js" defer></script>
+  <script src="js/restaurant.js" defer></script>
+  <script src="js/donations.js" defer></script>
+</body>
+</html>

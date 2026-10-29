@@ -1,0 +1,13 @@
+{
+  "name": "surplus",
+  "version": "1.0.0",
+  "description": "SURPLUS - localStorage prototype connecting restaurants, customers and donation organizations to reduce avoidable food waste (demo data only).",
+  "private": true,
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test test/*.test.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

@@ -3,78 +3,44 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>SUR+ – Good food deserves another chance</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>SURPLUS – Good food lives on</title>
+  <meta name="description" content="SURPLUS connects restaurants with customers and donation organizations to reduce avoidable food waste. Prototype with demo data.">
+  <link rel="icon" type="image/png" href="assets/logo.png">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+  <a class="skip-link" href="#app">Skip to content</a>
+
+  <div class="demo-banner" role="note">
+    <strong>Demo prototype.</strong> Demo accounts, fictional data, no real payments. Everything is saved in this browser only.
+  </div>
+
   <header class="nav">
-    <a class="logo" href="#top">SUR+</a>
-    <nav aria-label="Main">
-      <a href="#meals">Discover Food</a>
-      <a href="#how">How It Works</a>
-      <a href="#impact">Impact</a>
-    </nav>
-    <span class="demo-tag">Demo prototype</span>
+    <a class="brand" href="#/" id="brand-link" aria-label="SURPLUS home">
+      <img src="assets/logo.png" alt="SURPLUS – Good food lives on" width="886" height="428">
+    </a>
+    <nav id="main-nav" aria-label="Main"></nav>
+    <div class="account">
+      <label for="account-switch" class="account-label">Demo account</label>
+      <select id="account-switch" aria-describedby="account-hint"></select>
+      <span id="account-hint" class="sr-only">Switching accounts is a demo feature and not real security.</span>
+    </div>
   </header>
 
-  <main id="top">
-    <section class="hero">
-      <h1>Good food deserves another chance.</h1>
-      <p>Discover affordable meals from nearby restaurants and help reduce avoidable food waste.</p>
-      <div class="actions">
-        <a class="btn btn-primary" href="#meals">Explore Meals</a>
-        <a class="btn btn-secondary" href="#how">How It Works</a>
-      </div>
-    </section>
+  <main id="app" tabindex="-1" aria-live="polite"></main>
 
-    <section id="impact" class="impact">
-      <div class="stat"><strong>128</strong><span>Portions sold</span></div>
-      <div class="stat"><strong>46</strong><span>Portions donated</span></div>
-      <div class="stat"><strong>3</strong><span>Restaurants</span></div>
-      <p class="note">Demo data – fictional numbers.</p>
-    </section>
+  <footer class="footer">
+    <p>SURPLUS · Student innovation prototype · Food listings are provided by participating restaurants. Appropriate food handling and storage remain essential.</p>
+    <button type="button" class="link-btn" id="reset-demo">Reset demo data</button>
+  </footer>
 
-    <section id="meals" class="section">
-      <h2>Available meals</h2>
-      <div class="grid">
-        <article class="card">
-          <div class="img">🥗</div>
-          <h3>Vegetable Thali</h3>
-          <p class="rest">Green Leaf Kitchen</p>
-          <p class="price"><s>₹120</s> <strong>₹60</strong> <span class="badge">50% off</span></p>
-          <p class="meta">6 portions left · Pickup by 9:30 PM</p>
-          <span class="veg">Vegetarian</span>
-        </article>
-        <article class="card">
-          <div class="img">🍛</div>
-          <h3>Chicken Biryani</h3>
-          <p class="rest">Malabar Spice House</p>
-          <p class="price"><s>₹220</s> <strong>₹110</strong> <span class="badge">50% off</span></p>
-          <p class="meta">4 portions left · Pickup by 10:00 PM</p>
-          <span class="veg nonveg">Non-vegetarian</span>
-        </article>
-        <article class="card">
-          <div class="img">🥪</div>
-          <h3>Paneer Sandwich</h3>
-          <p class="rest">Café Nilgiri</p>
-          <p class="price"><s>₹90</s> <strong>₹45</strong> <span class="badge">50% off</span></p>
-          <p class="meta">8 portions left · Pickup by 8:45 PM</p>
-          <span class="veg">Vegetarian</span>
-        </article>
-      </div>
-      <p class="note">Food listings are provided by participating restaurants. Appropriate food handling and storage remain essential.</p>
-    </section>
+  <div id="modal-root"></div>
+  <div id="toast-root" role="status" aria-live="polite"></div>
 
-    <section id="how" class="section how">
-      <h2>How it works</h2>
-      <ol>
-        <li><strong>Restaurants list</strong> eligible surplus food at a discount.</li>
-        <li><strong>Customers reserve</strong> and collect before the deadline.</li>
-        <li><strong>Organizations accept</strong> separate donation listings.</li>
-      </ol>
-    </section>
-  </main>
-
-  <footer class="footer">SUR+ · Student innovation prototype · Demo reservation, no payment collected</footer>
+  <script src="js/store.js" defer></script>
+  <script src="js/app.js" defer></script>
+  <script src="js/marketplace.js" defer></script>
+  <script src="js/restaurant.js" defer></script>
+  <script src="js/donations.js" defer></script>
 </body>
 </html>
